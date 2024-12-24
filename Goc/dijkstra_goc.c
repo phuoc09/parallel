@@ -67,8 +67,7 @@ void dijkstra_serial(int V, int *adjacency_matrix, int *len, int *temp_distance)
     boolean *visited = (boolean *)malloc(V * sizeof(boolean));
     clock_t start = clock();
 
-    for (int source = 0; source < V; source++)
-    {
+        int source =0;
         for (int i = 0; i < V; i++)
         {
             visited[i] = FALSE;
@@ -94,7 +93,6 @@ void dijkstra_serial(int V, int *adjacency_matrix, int *len, int *temp_distance)
                 }
             }
         }
-    }
 
     clock_t end = clock();
     printf("TOTAL ELAPSED TIME ON CPU = %f SECS\n", (float)(end - start) / CLOCKS_PER_SEC);
